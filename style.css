@@ -1,0 +1,73 @@
+:root {
+    /* font families */
+    --ff-title: "Playfair Display", serif;
+    --ff-base: "Roboto", sans-serif;
+    --ff-hero: "Outfit", arial, sans-serif;
+
+    /* site colours */
+    --clr-light: #fdffc4;
+    --clr-dark: #00332a;
+    --clr-primary: #dbffa2;
+    --clr-secondary: #c3fcf2;
+    --clr-accent: #ff7750;
+}
+    
+*,
+*::before,
+*::after {
+    /* includes padding and border in total dimensions of elements */
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: #abbdaf; */
+    background: linear-gradient(110deg, var(--clr-primary), var(--clr-secondary));
+    height: 100vh;
+    font-family: var(--ff-base);
+    margin: 0;
+    padding-inline: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+main {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    min-width: 400px;
+}
+
+.hero__header {
+    font-family: var(--ff-title);
+    color: var(--clr-dark);
+    font-size: 3rem;
+}
+
+section {
+    padding: 2rem;
+}
+
+@media (min-width: 600px) {
+    /* mobile first approach - anything for desktop goes here */
+    main {
+        width: 80%;
+        max-width: 1000px;
+    }
+
+    section {
+        padding: 3rem
+    }
+
+    .hero__header {
+        font-size: 5rem;
+    }
+}
