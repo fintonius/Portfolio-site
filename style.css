@@ -71,3 +71,10 @@ section {
         font-size: 5rem;
     }
 }
+
+button {
+    all: unset;
+    cursor: pointer;
+    align-self: flex-start;
+    /* border: 1px red solid; */
+}
