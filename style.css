@@ -34,7 +34,6 @@ body {
     font-family: var(--ff-base);
     color: var(--clr-dark);
     margin: 0;
-    padding-inline: 1rem;
 }
 
 nav {
@@ -48,19 +47,18 @@ ul {
     list-style: none;
 }
 
-main {
-    margin: 0 auto;
+.hero {
     display: flex;
-    flex-direction: column;
-    width: 80%;
-    min-width: 400px;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .hero__header {
     font-family: var(--ff-title);
     color: var(--clr-dark);
-    font-size: 3rem;
+    font-size: 5rem;
 }
+
 
 section {
     padding: 2rem;
@@ -68,28 +66,24 @@ section {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2rem;    
+    margin: 0 auto;
 }
 
 @media (min-width: 625px) {
     /* mobile first approach - anything for desktop goes here */
-    main {
-        width: 80%;
-        max-width: 1000px;
-    }
 
     section {
+        width: 70%;
+        max-width: 1000px;
         padding: 3rem;
         flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .hero__header {
-        font-size: 5rem;
+        align-items: center;
+        margin: 0 auto;
     }
 }
 
-button {
+.dark-mode {
     cursor: pointer;
     align-self: flex-start;
     border: none;
@@ -98,7 +92,21 @@ button {
     background-color: transparent;
 }
 
-
+.projects-banner {
+    padding-block: 2rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    gap: 2rem;
+    background-color: white;
+    font-family: var(--ff-title);
+    color: var(--clr-accent);
+    font-size: 5rem;
+    font-weight: 100;
+    width: 100%;
+    padding-inline: 0;
+}
 
 
 
