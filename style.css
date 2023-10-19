@@ -7,8 +7,16 @@
     /* site colours */
     --clr-light: #fdffc4;
     --clr-dark: #00332a;
-    --clr-primary: #dbffa2;
-    --clr-secondary: #c3fcf2;
+    --clr-primary: #d8eabb;
+    --clr-secondary: #bfece3;
+    --clr-accent: #ff7750;
+}
+
+.darkmode {
+    --clr-light: #fdffc4;
+    --clr-dark: #fdffc4;
+    --clr-primary: #00332a;
+    --clr-secondary: #00332a;
     --clr-accent: #ff7750;
 }
     
@@ -17,13 +25,14 @@
 *::after {
     /* includes padding and border in total dimensions of elements */
     box-sizing: border-box;
+    margin: 0;
 }
 
 body {
-    /* background-color: #abbdaf; */
     background: linear-gradient(110deg, var(--clr-primary), var(--clr-secondary));
     height: 100vh;
     font-family: var(--ff-base);
+    color: var(--clr-dark);
     margin: 0;
     padding-inline: 1rem;
 }
@@ -31,6 +40,7 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     padding: 1rem;
 }
 
@@ -54,9 +64,14 @@ main {
 
 section {
     padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 625px) {
     /* mobile first approach - anything for desktop goes here */
     main {
         width: 80%;
@@ -64,7 +79,9 @@ section {
     }
 
     section {
-        padding: 3rem
+        padding: 3rem;
+        flex-direction: row;
+        align-items: flex-start;
     }
 
     .hero__header {
@@ -73,8 +90,28 @@ section {
 }
 
 button {
-    all: unset;
     cursor: pointer;
     align-self: flex-start;
-    /* border: 1px red solid; */
+    border: none;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* BUMPF
+alternate colours:
+    --clr-primary: #d8eabb;
+    --clr-secondary: #bfece3;
+    background-color: #abbdaf;
+
+*/
