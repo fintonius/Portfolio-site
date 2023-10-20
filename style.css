@@ -92,23 +92,38 @@ section {
     background-color: transparent;
 }
 
-.projects-banner {
-    padding-block: 2rem;
+
+.banner {
+    max-width: 100%;
+    background-color: white;
     overflow: hidden;
+}
+
+
+.banner__scroll {
+    padding-block: 2rem;    
     display: flex;
     align-items: center;
     justify-content: center;    
     gap: 2rem;
-    background-color: white;
+    
     font-family: var(--ff-title);
     color: var(--clr-accent);
     font-size: 5rem;
     font-weight: 100;
-    width: 100%;
     padding-inline: 0;
 }
 
+.banner[data-animated=true] .banner__scroll {
+    width: fit-content;  
+    animation: scroll 20s linear infinite;
+}
 
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 1rem));
+    }
+}
 
 
 

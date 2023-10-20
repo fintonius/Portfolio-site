@@ -1,3 +1,4 @@
+//Code to add a darkmode feature
 // use local storage to save the dark-mode state user has chosen
 let darkMode = localStorage.getItem('darkMode');
 
@@ -37,3 +38,28 @@ darkModeButton.addEventListener('click', () => {
         disableDarkMode();
     }
 });
+
+//code for the scrolling banner feature
+
+const scrollers = document.querySelectorAll('.banner');
+
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    addScrolling();
+}
+
+function addScrolling() {
+    scrollers.forEach((scroller) => {
+        scroller.setAttribute('data-animated', true);
+
+        //duplicates current content to allow smooth endless scrolling
+        const bannerScroll = scroller.querySelector('.banner__scroll');
+        const bannerContent = Array.from(bannerScroll.children);
+
+        bannerContent.forEach(item => {
+            let duplicatedItem = item.cloneNode(true);
+            //ensures duplicated content is not read twice
+            duplicatedItem.setAttribute('aria-hidden', true);
+            bannerScroll.appendChild(duplicatedItem);
+        })
+    })
+}
