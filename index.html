@@ -19,14 +19,16 @@
         </div>
         <button id="dark-mode" class="dark-mode" aria-label="toggle dark mode">
         </button>
-        <button class="open-menu" aria-controls="">
-            <svg fill="var(--open-menu-colour)" class="hamburger" 
-                 viewBox="0 0 100 100" width="250">
-                <rect class="line first" width="80" x="10" y="25" rx="5">                    
+
+        <!-- aria-controls & aria-pressed are to aid assistive technologies -->
+        <button class="open-menu" aria-controls="primary-navigation" aria-pressed="false">
+            <svg  class="hamburger" fill="var(--clr-accent)"
+                 viewBox="0 0 100 100" width="50">
+                <rect class="line first" width="80" height="10" x="10" y="25" rx="5">                    
                 </rect>
-                <rect class="line second" width="80" x="10" y="45" rx="5">                    
+                <rect class="line second" width="80" height="10" x="10" y="45" rx="5">                    
                 </rect>
-                <rect class="line third" width="80" x="10" y="65" rx="5">                    
+                <rect class="line third" width="80" height="10" x="10" y="65" rx="5">                    
                 </rect>
             </svg>
         </button>
@@ -88,3 +90,5 @@
     </main>
 </body>
 </html>
+
+<!--  -->

@@ -63,3 +63,15 @@ function addScrolling() {
         })
     })
 }
+
+//for the menu open 
+const menuButton = document.querySelector('.open-menu');
+
+menuButton.addEventListener('click', () => {
+    const isOpen = menuButton.getAttribute('aria-pressed');
+    if (isOpen === 'false') {
+        menuButton.setAttribute('aria-pressed', 'true');
+    } else {
+        menuButton.setAttribute('aria-pressed', 'false');
+    }
+})

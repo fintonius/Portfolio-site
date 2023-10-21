@@ -47,6 +47,47 @@ ul {
     list-style: none;
 }
 
+/* animation for toggling menu open. 
+   Following Kevin Powell tut https://www.youtube.com/watch?v=R00QiudbD4Y*/
+.open-menu {
+    background: transparent;
+    border: 0;
+}
+
+.open-menu .line {
+    transition: 
+    y 300ms ease-in 300ms, 
+    rotate 300ms ease-in,
+    opacity 0ms 300ms
+    ;
+    transform-origin: center;
+}
+
+.open-menu:hover .line {
+    transition: 
+    y 300ms ease-in, 
+    rotate 300ms ease-in 300ms,
+    opacity 0ms 300ms
+    ;
+}
+
+
+.open-menu:hover :is(.first, .third) {
+    y: 45;
+}
+
+.open-menu:hover .first {
+    rotate: 45deg;
+}
+
+.open-menu:hover .third {
+    rotate: -45deg;
+}
+
+.open-menu:hover .second {
+    opacity: 0;
+}
+
 .hero {
     display: flex;
     justify-content: space-between;
