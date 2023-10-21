@@ -66,12 +66,15 @@ function addScrolling() {
 
 //for the menu open 
 const menuButton = document.querySelector('.open-menu');
+const siteLinks = document.querySelector('.site-links');
 
 menuButton.addEventListener('click', () => {
     const isOpen = menuButton.getAttribute('aria-pressed');
     if (isOpen === 'false') {
         menuButton.setAttribute('aria-pressed', 'true');
+        siteLinks.setAttribute('data-open', 'true');
     } else {
         menuButton.setAttribute('aria-pressed', 'false');
+        siteLinks.setAttribute('data-open', 'false');
     }
 })

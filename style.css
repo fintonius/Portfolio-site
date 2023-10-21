@@ -36,11 +36,25 @@ body {
     margin: 0;
 }
 
+section {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;    
+    margin: 0 auto;
+}
+
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 4.5rem;
+    overflow: hidden;
+    position: relative;
 }
 
 ul {
@@ -54,6 +68,11 @@ ul {
     border: 0;
 }
 
+.open-menu:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
 .open-menu .line {
     transition: 
     y 300ms ease-in 300ms, 
@@ -63,7 +82,7 @@ ul {
     transform-origin: center;
 }
 
-.open-menu:hover .line {
+.open-menu[aria-pressed='true'] .line {
     transition: 
     y 300ms ease-in, 
     rotate 300ms ease-in 300ms,
@@ -71,27 +90,40 @@ ul {
     ;
 }
 
-
-.open-menu:hover :is(.first, .third) {
+.open-menu[aria-pressed='true'] :is(.first, .third) {
     y: 45;
 }
 
-.open-menu:hover .first {
+.open-menu[aria-pressed='true'] .first {
     rotate: 45deg;
 }
 
-.open-menu:hover .third {
+.open-menu[aria-pressed='true'] .third {
     rotate: -45deg;
 }
 
-.open-menu:hover .second {
+.open-menu[aria-pressed='true'] .second {
     opacity: 0;
 }
+
+.site-links {
+    position: absolute;
+    transform: translate(-120px, 35px);
+    transition: 300ms ease-in 300ms;
+}
+
+.site-links[data-open='true'] {
+    position: absolute;
+    transform: translate(-28px, 35px);
+}
+
 
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    padding-top: 0;
+    padding-bottom: 5rem;
 }
 
 .hero__header {
@@ -100,24 +132,13 @@ ul {
     font-size: 5rem;
 }
 
-
-section {
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 2rem;    
-    margin: 0 auto;
-}
-
 @media (min-width: 625px) {
     /* mobile first approach - anything for desktop goes here */
 
     section {
         width: 70%;
         max-width: 1000px;
-        padding: 3rem;
+        /* padding: 3rem; */
         flex-direction: row;
         align-items: center;
         margin: 0 auto;

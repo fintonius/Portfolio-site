@@ -13,17 +13,10 @@
 <body>
 
     <nav>
-        <div class="name">
-            <p>Fintan Ryan
-            </p>
-        </div>
-        <button id="dark-mode" class="dark-mode" aria-label="toggle dark mode">
-        </button>
-
         <!-- aria-controls & aria-pressed are to aid assistive technologies -->
         <button class="open-menu" aria-controls="primary-navigation" aria-pressed="false">
             <svg  class="hamburger" fill="var(--clr-accent)"
-                 viewBox="0 0 100 100" width="50">
+                 viewBox="0 0 100 100" width="30">
                 <rect class="line first" width="80" height="10" x="10" y="25" rx="5">                    
                 </rect>
                 <rect class="line second" width="80" height="10" x="10" y="45" rx="5">                    
@@ -32,7 +25,7 @@
                 </rect>
             </svg>
         </button>
-        <div class="links">
+        <div class="site-links" data-open="false">
             <ul>
                 <li>Home</li>
                 <li>Projects</li>
@@ -40,6 +33,12 @@
                 <li>Contact</li>
             </ul>
         </div>
+        <div class="name">
+            <p>Fintan Ryan
+            </p>
+        </div>
+        <button id="dark-mode" class="dark-mode" aria-label="toggle dark mode">
+        </button>
     </nav>
 
     <main>
