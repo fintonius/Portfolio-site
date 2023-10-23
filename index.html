@@ -49,9 +49,10 @@
                         Frontend Developer
                     </div>
                     <div class="hero__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Culpa dolorem ea quas quam omnis? Sunt illum ea sed ad autem porro
-                        debitis dolorem, illo numquam nisi facere vel dolorum expedita!
+                        <p>
+                            I am an intermediate Web Developer with a keen interest in animation. I love 
+                            bringing the web to life through motion.
+                        </p>                        
                     </div>
                 </div>
                 <div class="hero__portrait">
@@ -74,61 +75,100 @@
         <main>
             <section class="projects">
                 <div class="project game center">
-                    <img class="project__image" src="/media/images/project-links/hand.png">
+                    <a class="project__image" href="https://fintonius.github.io/teacup_game/">
+                        <img src="/media/images/project-links/hand.png">
+                    </a>
                     <div class="project__text">
-                        <h2>MAKE THE HAND MOVE IN RELATION TO CURSOR!</h2>
+                        <h2>CUPPA TEA GAME</h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Culpa dolorem ea quas quam omnis? Sunt illum ea sed ad autem porro
-                            debitis dolorem, illo numquam nisi facere vel dolorum expedita!
+                            This is a game I created for my application to the Founders and Coders 
+                            bootcamp course. 
+                        </p>
+                        <p>
+                            I used the Canvas API for the game environment and incorporated hand
+                            drawn elements for the graphics
+                    </div>
+                </div>                
+                <div class="project etch center">
+                    <a class="project__image" href="https://fintonius.github.io/etch-a-sketch2/">
+                        <img src="/media/images/project-links/etchsketch.png">
+                    </a>
+                    <div class="project__text">
+                        <h2>ETCH-A-SKETCH</h2>
+                        <p>
+                            This is a project I completed as part of the Odin Project course I have
+                            completed.
+                        </p>
+                        <p>This was a very involved project but ultimately very enjoyable. I set myself the 
+                            challenge to render the body of the etch-a-sketch entirely through CSS. This 
+                            required learning a lot and ultimatley helped me see the creative potential
+                            of web-development!
                         </p>
                     </div>
                 </div>
                 <div class="project calculator center">
-                    <img class="project__image" src="/media/images/project-links/calc.png">
+                    <a class="project__image" href="https://fintonius.github.io/calculator2/">
+                        <img src="/media/images/project-links/calc.png">
+                    </a>
                     <div class="project__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Culpa dolorem ea quas quam omnis? Sunt illum ea sed ad autem porro
-                        debitis dolorem, illo numquam nisi facere vel dolorum expedita!
+                        <h2>CACLULATOR</h2>
+                        <p>
+                            Another project I completed for the Odin Project. This was heavily focused
+                            on Javascript but I also continued developing the CSS skills I had picked 
+                            up with the Etch-A-Sketch project, committing to rendering the calculator
+                            entirely with CSS.
+                        </p>
                     </div>
                 </div>
-                <div class="project calculator center">
-                    <img class="project__image" src="/media/images/project-links/etchsketch.png">
+                <div class="project library center">
+                    <a class="project__image" href="https://fintonius.github.io/library/">
+                        <img src="/media/images/project-links/library.png">
+                    </a>
                     <div class="project__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Culpa dolorem ea quas quam omnis? Sunt illum ea sed ad autem porro
-                        debitis dolorem, illo numquam nisi facere vel dolorum expedita!
+                        <h2>LIBRARY</h2>
+                        <p>
+                            You guessed it, another Odin Project undertaking! And yes, also difficult,
+                             contrary and very very frustrating. I had started to notice a theme with
+                             web-dev stuff by this stage.
+                        </p>
                     </div>
                 </div>
-                <div class="project calculator center">
-                    <img class="project__image" src="/media/images/project-links/library.png">
-                    <div class="project__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Culpa dolorem ea quas quam omnis? Sunt illum ea sed ad autem porro
-                        debitis dolorem, illo numquam nisi facere vel dolorum expedita!
-                    </div>
-                </div>
-                <div class="project calculator center">
-                    <img class="project__image" src="">
-                    <div class="project__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Culpa dolorem ea quas quam omnis? Sunt illum ea sed ad autem porro
-                        debitis dolorem, illo numquam nisi facere vel dolorum expedita!
-                    </div>
-                </div>
+
             </section>
             <section class="about center">
                 <div class="sample">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Culpa dolorem ea quas quam omnis? Sunt illum ea sed ad autem porro
-                    debitis dolorem, illo numquam nisi facere vel dolorum expedita!
+                    <h1>ABOUT</h1>
+                    <p>
+                        I come from an arts background with an MFA and BA in media art. I am very 
+                        experienced working creatively with limited resources to solve problems.
+                    </p>
+                    <p>
+                        I have many years experience working as a care worker for people with 
+                        physical and mental disabilities. This has instilled in me a strong desire 
+                        to help others, work with empathy and an appreciation for patience when 
+                        solving difficult problems.
+                    </p>
                 </div>
             </section>
             <section class="contact center">
-                <div class="sample">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Culpa dolorem ea quas quam omnis? Sunt illum ea sed ad autem porro
-                    debitis dolorem, illo numquam nisi facere vel dolorum expedita!
+                <div class="sample form-section">
+                    <h1>CONTACT</h1>
+                    <p>All fields marked with an <span>*</span> are required</p>
+                        <form id="contact" autocomplete="no">
+                                <article class="form-input">
+                                    <label for="fname"><span>*</span> Name</label>
+                                    <input type="text" id="fname" placeholder="Jane" name="fname" autocomplete="no" required/>
+                                </article>                            
+                                <article class="form-input">
+                                    <label for="email"><span>*</span> Email</label>
+                                    <input type="email" autocomplete="barnaby" id="email" placeholder="example@place.com" name="email"
+                                        required/>
+                                </article> 
+                                <article class="form-input">
+                                    <label for="message"><span>*</span> Message</label>
+                                    <input type="text" id="message" placeholder="message" name="fname" autocomplete="no" required/>
+                                </article>                                                  
+                        </form>
                 </div>
             </section>
         </main>
